@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h3 ~ p {
+        color: yellow;
+      }
+
+      h1 + p {
+        color: green;
+      }
+
+      div > p {
+        color: red;
+      }
+
+      a:link {
+        color: blue;
+      }
+      a:visited {
+        color: red;
+      }
+
+      input[type="number"]:placeholder-shown {
+        background-color: bizque;
+      }
+      input:enabled {
+        background-color: white;
+      }
+      input:disabled {
+        background-color: coral;
+      }
+
+      * {
+        color: black;
+      }
+      :not(label) {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Nama-nama Zodiak</h1>
+      <p>Ayo cari tau tentang zodiak!</p>
+      <h3>1. Aries</h3>
+      <div>
+        <p>Tanggal: 21 Maret - 19 April</p>
+        <p>Simbol: Domba</p>
+      </div>
+      <h3>2. Taurus</h3>
+      <div>
+        <p>Tanggal: 20 April - 20 Mei</p>
+        <p>Simbol: Banteng</p>
+      </div>
+      <p>Tanggal berapa kamu lahir?</p>
+      <p>Jadi, apa Zodiak mu?</p>
+    </div>
+
+    <h2>Facebook atau Instagram?</h2>
+    <a href="https://www.facebook.com/" target="blank">Kunjungi Facebook</a>
+    <br />
+    <a href="https://www.instagram.com/" target="blank">Kunjungi Instagram</a>
+    <br />
+    <br />
+
+    <label for="text">Mana yang lebih sering kamu gunakan?</label> <br />
+    <input type="text" id="text" /> <br />
+    <label for="number"> Berapa jam kamu menggunakanya dalam sehari?</label>
+    <br />
+
+    <input type="number" id="number" placeholder="Jumlah" /> <br />
+    <label for="">Jelaskan caramu agar tidak berlebihan memainkannya!</label
+    ><br />
+    <input type="text" disabled /> <br />
+    <br />
+    <input type="submit" value="Submit" />
+  </body>
+</html>

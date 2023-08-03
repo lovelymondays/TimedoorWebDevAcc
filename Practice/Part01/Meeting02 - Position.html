@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .relative {
+        position: relative;
+        border: 2px solid steelblue;
+        left: 30px;
+      }
+
+      .static {
+        position: static;
+        border: 2px solid steelblue;
+      }
+
+      div.relative {
+        position: relative;
+        border: 2px solid steelblue;
+        width: 200px;
+        height: 300px;
+      }
+
+      .fixed {
+        position: fixed;
+        border: 2px solid steelblue;
+        right: 0;
+        bottom: 0;
+      }
+
+      .sticky {
+        position: sticky;
+        border: 2px solid steelblue;
+        right: 0;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Meeting 02 Start -->
+    <p class="static">Ini contoh kelas static</p>
+    <p class="relative">ini contoh kelas relative</p>
+
+    <div class="relative">
+      <p>Contoh Relative Position</p>
+      <div>
+        <p class="absolute">Absolute</p>
+      </div>
+    </div>
+
+    <p class="fixed">Contoh kelas Fixed</p>
+    <p class="sticky">Contoh kelas Sticky</p>
+    <!-- Meeting 02 End -->
+  </body>
+</html>

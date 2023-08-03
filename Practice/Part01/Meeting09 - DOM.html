@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <style>
+      .blue {
+        color: whitesmoke;
+        background-color: darkblue;
+      }
+
+      .red {
+        color: whitesmoke;
+        background-color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="hello-world">Hi world</p>
+
+    <p id="programmer">I am programmer</p>
+
+    <p>class</p>
+
+    <p class="apps">kelas apps</p>
+
+    <ul id="language">
+      <li>Javascript</li>
+      <li>Python</li>
+      <li>Kotlin</li>
+    </ul>
+  </body>
+  <script>
+    document.getElementById("hello-world").innerHTML = "Hellowww!!";
+
+    document.getElementById("programmer").innerHTML = "ayam";
+
+    //get element by tag name
+
+    document.getElementsByTagName("p")[2].innerHTML = "tag";
+
+    //get ekement by class name
+    document.getElementsByClassName("apps")[0].innerHTML = "contoh";
+
+    document.getElementsByTagName("p")[0].className = "blue";
+
+    document.getElementsByTagName("p")[0].className = "red";
+
+    document.getElementsByTagName("p")[0].style.background = "green";
+
+    //set atribute
+
+    document.getElementsByTagName("p")[0].setAttribute("class", "green");
+
+    var paragraph = document.createElement("p");
+
+    paragraph.innerHTML = "New Paragraph";
+
+    document.body.appendChild(paragraph).setAttribute("class", "blue");
+
+    document.body.removeChild(paragraph);
+
+    var list = document.getElementById("language");
+    list.removeChild(list.childNodes[0]); //ganti arraynya
+  </script>
+</html>

@@ -1,0 +1,90 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .title {
+        text-align: center;
+      }
+      .form {
+        padding: 15px;
+        background-color: rgb(159, 231, 174);
+        box-shadow: 0 0 5px rgb(116, 240, 142);
+        border-radius: 5px;
+        width: 30%;
+      }
+      label {
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+      input,
+      textarea {
+        display: inline-block;
+        margin-bottom: 10px;
+        border: none;
+        padding: 5px;
+        border-radius: 3px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" id="firstName" />
+    </form>
+
+    <!-- ----------- Challenge 01 ----------- -->
+
+    <form action="result.html" target="_blank" method="GET" autocomplete="on">
+      <label>Nama</label> <br />
+      <input type="text" /> <br />
+      <label>Kelas di Timedoor</label> <br />
+      <input type="text" /> <br />
+      <label>Umur</label> <br />
+      <input type="text" /> <br />
+
+      <!-- ----------- Text Area ----------- -->
+      <label for="address">Address</label><br />
+      <textarea name="address" id="address" cols="30" rows="20"></textarea>
+
+      <!-- ----------- Option ----------- -->
+      <label for="country">Country</label><br />
+      <select name="country" id="country">
+        <option value="singapore">Singapore</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="japan">Japan</option>
+      </select>
+
+      <input type="submit" name="" id="" />
+    </form>
+
+    <!-- ----------- Latihan Membuat Form ----------- -->
+
+    <div class="form">
+      <h3 class="title">
+        Coding Competition <br />
+        Enrollment 2021
+      </h3>
+      <form
+        action="result.html"
+        target="blank"
+        method="GET"
+        autocomplete="on"
+        novalidate
+      >
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" />
+        <label for="address">Address</label>
+        <textarea id="address" name="address" cols="30" row="10"></textarea>
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" />
+        <input type="submit" value="Submit" class="submit-btn" />
+      </form>
+    </div>
+  </body>
+</html>

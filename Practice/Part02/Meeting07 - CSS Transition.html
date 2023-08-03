@@ -1,0 +1,177 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 80%;
+        border: 2px solid black;
+        margin: 20px;
+        text-align: center;
+      }
+      .aircraft {
+        display: block;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        transition-duration: 5s;
+      }
+      .container:hover .aircraft {
+        margin-left: 200px;
+        width: 30%;
+      }
+      .a1 {
+        transition-timing-function: ease;
+      }
+
+      .a2 {
+        transition-timing-function: ease-in;
+      }
+
+      .a3 {
+        transition-timing-function: ease-out;
+      }
+
+      .a4 {
+        transition-timing-function: ease-in-out;
+      }
+
+      .a5 {
+        transition-timing-function: linear;
+      }
+
+      .a6 {
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 2);
+      }
+
+      .last-aircraft {
+        display: block;
+        width: 50px;
+        height: auto;
+        opacity: 0.5;
+        margin-bottom: 20px;
+        transition: width 3s ease-in 1s, opacity 3s ease-out 1s,
+          margin-left 3s ease-in-out 1s;
+      }
+      .last-aircraft:hover {
+        width: 80px;
+        opacity: 1;
+        margin-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ease</h1>
+      <div class="aircraft">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/014/455/865/original/plane-icon-icon-on-transparent-background-free-png.png"
+          alt="plane"
+          width="240"
+          class="aircraft a1"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>ease-in</h1>
+      <div class="aircraft">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/014/455/865/original/plane-icon-icon-on-transparent-background-free-png.png"
+          alt="plane"
+          width="240"
+          class="aircraft a2"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>ease-out</h1>
+      <div class="aircraft">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/014/455/865/original/plane-icon-icon-on-transparent-background-free-png.png"
+          alt="plane"
+          width="240"
+          class="aircraft a3"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>ease-in-out</h1>
+      <div class="aircraft">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/014/455/865/original/plane-icon-icon-on-transparent-background-free-png.png"
+          alt="plane"
+          width="240"
+          class="aircraft a4"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Linear</h1>
+      <div class="aircraft">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/014/455/865/original/plane-icon-icon-on-transparent-background-free-png.png"
+          alt="plane"
+          width="240"
+          class="aircraft a5"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Cubic</h1>
+      <div class="aircraft">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/014/455/865/original/plane-icon-icon-on-transparent-background-free-png.png"
+          alt="plane"
+          width="240"
+          class="aircraft a6"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Adding transition delay</h1>
+      <div class="aircraft">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/014/455/865/original/plane-icon-icon-on-transparent-background-free-png.png"
+          alt="plane"
+          width="240"
+          class="aircraft"
+          style="transition: 2s"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Adding Multiple Property</h1>
+      <div class="aircraft">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/014/455/865/original/plane-icon-icon-on-transparent-background-free-png.png"
+          alt="plane"
+          width="240"
+          class="aircraft"
+          style="
+            transition: width 3s, opacity 3s ease-out 1s,
+              margin- left 3s ease-in-out;
+          "
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Last aircraft</h1>
+      <div class="aircraft">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/014/455/865/original/plane-icon-icon-on-transparent-background-free-png.png"
+          alt="plane"
+          width="240"
+          class="last-aircraft"
+        />
+      </div>
+    </div>
+  </body>
+</html>

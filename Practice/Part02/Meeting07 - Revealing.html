@@ -1,0 +1,185 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("wave.svg");
+        background-size: 370%;
+        background-repeat: no-repeat;
+      }
+      .title {
+        text-align: center;
+        color: rgb(161, 10, 10);
+        font-size: 70px;
+        font-family: "WindSong", cursive;
+      }
+      .container-flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .container {
+        position: relative;
+        width: 640px;
+        height: 426px;
+      }
+      .big-image {
+        position: absolute;
+        width: 100%;
+      }
+      .big-image img {
+        border-radius: 8px;
+        width: 100%;
+      }
+      .image-text {
+        position: absolute;
+        bottom: 30px;
+        right: 50px;
+        padding: 1px 6px;
+        background-color: rgba(255, 248, 248, 0.699);
+        border-radius: 10px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      h2 {
+        font-family: "Roboto", sans-serif;
+      }
+      .article-container {
+        margin: 20px 70px;
+      }
+      .description p {
+        text-align: justify;
+        line-height: 1.8;
+        text-indent: 80px;
+        font-family: "Roboto", sans-serif;
+      }
+      .companies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .company {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px 10px;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 8px grey;
+      }
+      .company img {
+        border-radius: 10px;
+      }
+
+      .company-description h4 {
+        padding: 0;
+        margin: 0;
+        font-size: 25px;
+      }
+      .company-description p {
+        width: 450px;
+        font-family: "Roboto", sans-serif;
+        line-height: 1.8;
+        text-indent: 80px;
+        text-align: justify;
+      }
+      .reveal {
+        transform: translateY(150px);
+        opacity: 0;
+        transition: all 2s;
+      }
+      .active {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="header">
+      <h1 class="title">Facebook</h1>
+      <div class="container-flex">
+        <div class="container">
+          <div class="big-image">
+            <img
+              src="https://media.premiumtimesng.com/wp-content/files/2021/04/Facebook-Headquarters.png"
+              alt=""
+            />
+            <div class="image-text">
+              <h3>Facebook, California, USA</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="content">
+      <div class="article-container">
+        <div class="description">
+          <h2>Have you ever heard about Facebook</h2>
+          <p>Facbook is......</p>
+        </div>
+        <div class="companies">
+          <h2>3 Big Companies That"s Located in Silicon Valley</h2>
+
+          <div id="google" class="company reveal">
+            <img
+              src="https://media.istockphoto.com/id/1163973538/photo/googles-headquarters-in-silicon-valley-in-mountain-view-california.jpg?s=612x612&w=0&k=20&c=FHU3WVVqyhFU6kvhCJwgad2t_v8iKOLkIEca4vMJukU="
+              alt="Google"
+              width="450px"
+            />
+            <div class="company-description">
+              <h4>Google</h4>
+              <p>Founded in 1998 .....</p>
+            </div>
+          </div>
+
+          <div id="netflix" class="company reveal">
+            <img
+              src="https://images.squarespace-cdn.com/content/5bfa3e12da02bc0b5fbc4533/a22c5419-8466-4cb5-8773-9c33c14c5bf6/netflix+headquarters+los+angeles.jpeg?format=1500w&content-type=image%2Fjpeg"
+              alt="Netflix"
+              width="450px"
+            />
+            <div class="company-description">
+              <h4>Netflix</h4>
+              <p>Founded in 1998 .....</p>
+            </div>
+          </div>
+
+          <div id="riot" class="company reveal">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/56e2e0c520c6472a2586add2/fa1a6951-dcce-40cb-bdf3-f5726bff0b35/riot+games+hq.jpg"
+              alt="Riot"
+              width="450px"
+            />
+            <div class="company-description">
+              <h4>Riot Game</h4>
+              <p>Founded in 1998 .....</p>
+            </div>
+          </div>
+          <!-- tambahkan Facebook dan Netflix disini-->
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    window.addEventListener("scroll", reveal);
+
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      reveals.forEach((reveal) => {
+        var windowHeight = window.innerHeight;
+        var revealTop = reveal.getBoundingClientRect().top;
+        var revealPoint = 40;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveal.classList.add("active");
+        } else {
+          reveal.classList.remove("active");
+        }
+      });
+    }
+  </script>
+</html>

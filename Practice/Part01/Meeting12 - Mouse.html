@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Mouse</title>
+
+    <style>
+      #div {
+        overflow: scroll;
+        width: 250px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body onkeydown="keypress()">
+    <img
+      src="https://media.giphy.com/media/ VTtANKl0beDFQRLDTh/giphy.gif"
+      alt="Code"
+      width=""
+      height="auto"
+      onmouseover="rotateGif(this)"
+      onmouseout="rotateBack(this)"
+    />
+
+    <div id="div" onscroll="scrolling()">
+      <h3>Bagaimana membedakan HTML, CSS, dan Javascript pada website?</h3>
+      <p>
+        HTML, CSS, dan Javascript bisa di analogikan sebagai tubuh manusia. HTML
+        adalah kerangka tubuh, CSS adalah pakaian atau aksesoris yang digunakan,
+        dan Javascript adalah sel saraf yang membuat manusia bisa bergerak dan
+        berinteraksi
+      </p>
+    </div>
+
+    <p class="p3">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
+      magnam quas accusamus impedit incidunt sequi asperiores itaque vitae natus
+      aliquam rerum veniam amet sint mollitia, necessitatibus similique in,
+      repudiandae provident?
+    </p>
+
+    <button class="btn">Event Handler</button>
+    <button class="btn-2">Event Handler</button>
+  </body>
+
+  <script>
+    function rotateGif(element) {
+      element.style.transform = "translate(5px, 5px)";
+      element.style.transform = "rotate(180deg)";
+    }
+    function rotateBack(element) {
+      element.style.transform = "translate(0px, 0px)";
+      element.style.transform = "rotate(0deg)";
+    }
+
+    function scrolling() {
+      document.getElementById("div").style.color = "blue";
+    }
+
+    function keypress() {
+      var content = document.getElementById("div");
+      content.innerHTML = "You pressed a key!";
+      content.style.color = "red";
+    }
+
+    var btn = document.querySelector(".btn");
+    btn.onclick = () => {
+      alert("Hello World!");
+    };
+
+    var paragraph = document.querySelector(".p3");
+    paragraph.addEventListener("click", function () {
+      paragraph.style.backgroundColor = "lightblue";
+    });
+
+    var btn = document.querySelector(".btn-2");
+    btn.addEventListener("click", function () {
+      alert("Hello World!");
+    });
+    btn.addEventListener("click", function () {
+      console.log("Hello Programmer!");
+    });
+  </script>
+</html>

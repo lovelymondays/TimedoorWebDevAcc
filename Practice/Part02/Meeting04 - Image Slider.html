@@ -1,0 +1,222 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .section-slider {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
+      }
+      .image-slider {
+        position: relative;
+        width: 640px;
+        height: 426px;
+      }
+      .slide {
+        width: 100%;
+        position: absolute;
+      }
+      .slide img {
+        width: 100%;
+        border-radius: 15px;
+      }
+      .slide-text {
+        position: absolute;
+        bottom: 50px;
+        left: 30px;
+        background-color: rgba(220, 220, 220, 0.609);
+        padding: 15px;
+        border-radius: 10px;
+      }
+      .slide-text h2 {
+        font-size: 30px;
+        padding: 0;
+        margin: 0;
+      }
+      .slide-text p {
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+      }
+      .navigation {
+        position: absolute;
+        display: flex;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .slider-btn {
+        background-color: rgb(151, 151, 151);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 0 5px;
+      }
+
+      .slide {
+        /* tambahkan kode di bawah ini*/
+        clip-path: circle(0% at 0 50%);
+      }
+      .slide.active {
+        clip-path: circle(150% at 0 50%);
+        transition: 2s;
+        transition-property: clip-path;
+      }
+      .slider-btn.active {
+        background-color: rgb(38, 70, 83);
+      }
+    </style>
+  </head>
+  <body>
+    <section id="slider" class="section-slider">
+      <div class="image-slider">
+        <div class="slide active">
+          <img
+            src="https://wearecollins.imgix.net/uploads/01_Spotify.gif?auto=format%2Ccompress&dpr=2.63&fit=max&q=90&w=400"
+            alt="Contoh"
+          />
+          <div class="slide-text">
+            <h2>Game Development</h2>
+            <p>
+              Instead of playing game all day long, why not create your own?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img
+            src="https://wearecollins.imgix.net/uploads/01_Spotify.gif?auto=format%2Ccompress&dpr=2.63&fit=max&q=90&w=400"
+            alt="Contoh"
+          />
+          <div class="slide-text">
+            <h2>Ayaaaaaaaaam</h2>
+            <p>
+              Instead of playing game all day long, why not create your own?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img
+            src="https://wearecollins.imgix.net/uploads/01_Spotify.gif?auto=format%2Ccompress&dpr=2.63&fit=max&q=90&w=400"
+            alt="Contoh"
+          />
+          <div class="slide-text">
+            <h2>Websiteeee</h2>
+            <p>
+              Instead of playing game all day long, why not create your own?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img
+            src="https://wearecollins.imgix.net/uploads/01_Spotify.gif?auto=format%2Ccompress&dpr=2.63&fit=max&q=90&w=400"
+            alt="Contoh"
+          />
+          <div class="slide-text">
+            <h2>Riot Game</h2>
+            <p>
+              Instead of playing game all day long, why not create your own?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img
+            src="https://wearecollins.imgix.net/uploads/01_Spotify.gif?auto=format%2Ccompress&dpr=2.63&fit=max&q=90&w=400"
+            alt="Contoh"
+          />
+          <div class="slide-text">
+            <h2>Mobile Development</h2>
+            <p>
+              Instead of playing game all day long, why not create your own?
+            </p>
+          </div>
+        </div>
+        <!-- Copy paste div class slide di atas (tanpa kata active) sampai ada 5 buah div -->
+        <div class="navigation">
+          <div class="slider-btn active"></div>
+          <div class="slider-btn"></div>
+          <div class="slider-btn"></div>
+          <div class="slider-btn"></div>
+          <div class="slider-btn"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <!-- ------------------------ Contoh ------------------------ -->
+  <script>
+    var genres = ["Jazz", "Pop", "Rock", "Dangdut"];
+    //for loop
+    for (i = 0; i < genres.length; i++) {
+      document.write("I choose " + genres[i] + "<br>");
+    }
+    //for each
+    genres.forEach(function (genre) {
+      document.write("I choose " + genre + "<br>");
+    });
+  </script>
+
+  <!-- ------------------------ Slider ------------------------ -->
+  <script>
+    var slides = document.querySelectorAll(".slide");
+    var buttons = document.querySelectorAll(".slider-btn");
+    let currentSlide = 1;
+    //Manual images slider
+    var manualNav = function (manual) {
+      slides.forEach(function (slide) {
+        slide.classList.remove("active");
+      });
+    };
+    buttons.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    slides[manual].classList.add("active");
+    buttons[manual].classList.add("active");
+    buttons.forEach(function (btn, i) {
+      btn.addEventListener("click", function () {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+  </script>
+
+  <!-- ------------------------ Repeat ------------------------ -->
+  <script>
+    var repeat = function (activeClass) {
+      let active = document.getElementsByClassName("active");
+      let i = 1;
+      var repeater = function () {
+        setTimeout(function () {
+          [...active].forEach(function (activeSlide) {
+            activeSlide.classList.remove("active");
+          });
+          slides[i].classList.add("active");
+          buttons[i].classList.add("active");
+          i++;
+          if (slides.length == i) {
+            i = 0;
+          }
+          if (i >= slides.length) {
+            return;
+          }
+          repeater();
+        }, 2000);
+      };
+      repeater();
+    };
+    repeat();
+  </script>
+
+  <script>
+    setTimeout(function () {
+      //command
+    }, timeInMillisecond);
+  </script>
+</html>

@@ -1,0 +1,273 @@
+/* Meeting 01 Start */
+h1 {
+  color: whitesmoke;
+  background-color: lightcoral;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  text-align: center;
+}
+
+p {
+  font-style: italic;
+}
+
+/* img {
+  aspect-ratio: 16/9;
+  width: 50%;
+} */
+
+/* Meeting 01 End */
+
+/* Meeting 02 Start */
+
+/* membuat navbar vertical */
+/* nav {
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+a {
+  display: block;
+  background-color:rgb(151, 153, 153);
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 4px;
+}
+a:hover {
+  background-color: burlywood;
+} */
+
+/* membuat navbar horizontal */
+
+/* body {
+  margin-top: 10%;
+} */
+
+nav {
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(219, 84, 75);
+  padding: 15px;
+  float: left;
+}
+a:hover {
+  background-color: burlywood;
+}
+
+.main-header {
+  background-color: rgb(245, 235, 220);
+  padding-left: 10px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+}
+.header-info {
+  text-align: left;
+  color: rgb(219, 84, 75);
+  padding: 0px;
+  margin: 14px;
+  position: absolute;
+  left: 0px;
+}
+
+/* Meeting 02 End */
+
+/* Meeting 03 Start */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-content {
+  display: none;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  top: 100%;
+  background-color: antiquewhite;
+}
+.dropdown-item:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+a.dropdown-item {
+  min-width: 160px;
+  text-align: left;
+}
+
+li.dropdown-item:hover a.dropdown-item {
+  text-align: left;
+  color: gainsboro;
+}
+/* Meeting 03 End */
+
+/* Meeting 04 Start */
+.items {
+  display: flex;
+  justify-content: center;
+}
+.item {
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.portrait {
+  max-width: 100%;
+  max-height: 100%;
+}
+.item h3,
+p {
+  text-align: center;
+  padding: 5px;
+  color: steelblue;
+}
+
+img.hero {
+  aspect-ratio: 16/9;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  height: auto;
+}
+
+/* Meeting 04 End */
+
+/* Meeting 05 Start */
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10%;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: blanchedalmond;
+  color: black;
+  padding: 10px;
+  width: 100%;
+}
+
+.text-about {
+  width: 100%;
+  height: auto;
+}
+/* Meeting 05 End */
+
+/* Meeting 06 Start */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.tab {
+  background-color: gainsboro;
+  width: 400px;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 20px;
+}
+h1.name {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+h2.price {
+  font-size: 38px;
+  color: black;
+}
+.list {
+  list-style-type: disc;
+  margin-bottom: 50px;
+  text-align: left;
+}
+.list li {
+  margin-top: 20px;
+  color: black;
+}
+hr {
+  height: 7px;
+  width: 80%;
+  margin: auto;
+  background-color: rgb(219, 84, 75);
+  border: none;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: rgba(219, 85, 75, 0.616);
+  border-radius: 8px;
+  color: white;
+  padding: 8px;
+  border: none;
+  font-size: 20pt;
+}
+button:hover {
+  transform: scale(1.2, 1.2);
+  background-color: rgb(219, 85, 75);
+}
+
+/* Meeting 06 End */
+
+/* Meeting 07 Start  */
+footer {
+  background-image: linear-gradent(rgb(252, 232, 204), rgb(197, 141, 137));
+}
+.main-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.left-footer {
+  margin-right: auto;
+  margin-left: 40px;
+}
+.right-footer {
+  margin-left: auto;
+  margin-right: 40px;
+}
+.center-footer {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.info-left {
+  color: rgb(219, 84, 75);
+  text-align: left;
+  width: 100%;
+}
+
+.info-right {
+  color: rgb(219, 84, 75);
+  text-align: right;
+  width: 100%;
+}
+.info-center {
+  color: rgb(219, 84, 75);
+  text-align: center;
+  width: 100%;
+  padding-top: 5px;
+  border-top: 1px solid rgb(146, 168, 133);
+}
+/* Meeting 07 End  */

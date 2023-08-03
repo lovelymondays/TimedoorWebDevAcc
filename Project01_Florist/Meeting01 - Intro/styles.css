@@ -1,0 +1,19 @@
+h1{
+   color: whitesmoke;
+   background-color:lightcoral ;
+   text-align: center;
+}
+
+h1,h2,h3,h4,p{
+   text-align: center;
+}
+
+p{
+   font-style: italic;
+}
+
+
+img {
+ aspect-ratio: 16/9;
+ width: 100%;
+}

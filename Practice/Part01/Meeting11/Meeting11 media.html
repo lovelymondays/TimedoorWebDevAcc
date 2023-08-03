@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+  </head>
+  <body>
+    <video width="320" height="240" controls src="vide.mp4"></video>
+
+    <audio
+      width="500"
+      height="10"
+      src="indian-music-bass-boosted.mp3"
+      controls
+    ></audio>
+
+    <iframe
+      width="320"
+      height="240"
+      src="https://www.youtube-nocookie.com/embed/cSLVCLBASI0?start=770"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      controls
+    ></iframe>
+
+    <button onclick="dayMode()">Day</button>
+    <button onclick="nightMode()">Night</button>
+  </body>
+
+  <script>
+    function dayMode() {
+      document.querySelector("body").style.color = "black";
+      document.querySelector("body").style.backgroundColor = "white";
+    }
+    function nightMode() {
+      document.querySelector("body").style.color = "white";
+      document.querySelector("body").style.backgroundColor = "black";
+    }
+  </script>
+</html>

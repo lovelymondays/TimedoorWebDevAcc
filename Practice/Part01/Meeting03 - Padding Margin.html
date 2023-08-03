@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Meeting 3 Start */
+
+      .dropdown-content {
+        display: none;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      ul {
+        list-style-type: none;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+      }
+      .dropdown:hover .dropdown-content {
+        display: flex;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        text-align: left;
+        padding: 5px;
+        margin: 2px 0px;
+        background-color: wheat;
+        min-width: 160px;
+        box-shadow: 3px 3px gainsboro;
+        border-radius: 5px;
+      }
+      li:hover {
+        background-color: white;
+        cursor: pointer;
+      }
+
+      li:hover a {
+        color: gainsboro;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* Meeting 3 End */
+    </style>
+  </head>
+  <body>
+    <!-- Meeting 03 Start Part 01 -->
+    <p style="background-color: blue">Tanpa Margin</p>
+    <p style="background-color: blue; margin: 30px">Dengan Margin</p>
+    <p style="border: dotted green 5px">Dotted Red Border</p>
+    <p style="border: dashed red 5px">Shorted Border</p>
+    <p style="background-color: pink">Tanpa Padding</p>
+    <p style="background-color: pink; padding: 30px">Dengan Padding</p>
+
+    <nav>
+      <div class="dropdown">
+        <a href="">Menu</a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="">Submenu1</a></li>
+            <li><a href="">Submenu2</a></li>
+            <li><a href="">Submenu3</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Meeting 03 End  Part 01-->
+  </body>
+</html>
