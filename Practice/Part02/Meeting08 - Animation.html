@@ -9,10 +9,14 @@
         border: 2px solid lightblue;
       }
       .witch {
-        width: 70px;
         margin-bottom: 10px;
       }
-
+      .container:hover .witch {
+        animation-name: animasiWitch;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+      }
       @keyframes animasiWitch {
         0% {
           margin-left: 0;
@@ -34,9 +38,13 @@
     </style>
   </head>
   <body>
-    <img
-      src="https://images.squarespace-cdn.com/content/v1/56e2e0c520c6472a2586add2/fa1a6951-dcce-40cb-bdf3-f5726bff0b35/riot+games+hq.jpg"
-      alt=""
-    />
+    <div class="container">
+      <img
+        src="https://i.pinimg.com/236x/ed/3c/56/ed3c5668f6c93125b59254f476c259a5.jpg"
+        alt="animation"
+        width="200"
+        class="witch"
+      />
+    </div>
   </body>
 </html>

@@ -1,0 +1,117 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .splash {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: cadetblue;
+        z-index: 200;
+        margin: 0;
+        padding: 0;
+        top: 0;
+      }
+      .splash h1 {
+        position: absolute;
+        top: 60%;
+        left: 40%;
+        font-size: 50px;
+      }
+
+      .astronaut-dabbing {
+        position: absolute;
+        top: 40%;
+        left: 18%;
+        width: 400px;
+        animation: hide 0.5s 1s forwards;
+      }
+      .astronaut-takeoff {
+        position: absolute;
+        top: 93%;
+        left: 18%;
+      }
+
+      .animation {
+        animation: glide 3s ease-out forwards;
+      }
+      @keyframes hide {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        75% {
+          opacity: 0.7;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes glide {
+        50% {
+          transform: scale(0.8);
+        }
+        100% {
+          transform: translateY(-900px) scale(0.1);
+        }
+      }
+      @media (max-width: 900px) {
+        * {
+          font-size: 2.5vw;
+          padding: 0px;
+          margin: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="splash">
+      <h1 class="splash-text" data-aos="fade-right" data-aos-duration="200">
+        Hello Guys! <br />
+        Welcome to the club
+      </h1>
+      <img
+        class="astronaut-dabbing"
+        src="https://advance1-exam.netlify.app/assets/breakfast3.jpg"
+        alt="breakfast-1"
+        width="480"
+      />
+      <img
+        class="astronaut-takeoff"
+        src="https://advance1-exam.netlify.app/assets/breakfast2.jpg"
+        alt="breakfast-2"
+        width="480"
+      />
+    </div>
+  </body>
+  <script>
+    var splash = document.querySelector(".splash");
+    if (splash) {
+      document.addEventListener("DOMContentLoaded", function (event) {
+        setTimeout(function () {
+          splash.style.display = "none";
+        }, 3000);
+      });
+    }
+
+    var animate = document.querySelector(".astronaut-takeoff");
+    if (animate) {
+      document.addEventListener("DOMContentLoaded", function (event) {
+        setTimeout(function () {
+          animate.classList.add("animation");
+        }, 400);
+      });
+    }
+
+    var splashText = document.querySelector(".splash-text");
+    if (splashText) {
+      setTimeout(function () {
+        splashText.innerHTML = "Come in!";
+      }, 2000);
+    }
+  </script>
+</html>

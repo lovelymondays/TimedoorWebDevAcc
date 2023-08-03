@@ -1,0 +1,101 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wave1 {
+        position: absolute;
+        margin-left: 240;
+        top: 10px;
+        z-index: 2;
+      }
+      .wave2 {
+        margin-left: 240;
+        position: absolute;
+        top: 20px;
+        z-index: 3;
+      }
+      .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1>Wave</h1>
+      <div>
+        <svg
+          class="wave1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          width="240"
+        >
+          <path
+            fill="#0099ff"
+            fill-opacity="1"
+            d="M0,192L48,170.7C96,149,192,107,288,112C384,117,480,171,576,192C672,213,768,203,864,165.3C960,128,1056,64,1152,74.7C1248,85,1344,171,1392,213.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+
+        <svg
+          class="wave2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          width="240"
+        >
+          <path
+            fill="blue"
+            fill-opacity="1"
+            d="M0,192L48,170.7C96,149,192,107,288,112C384,117,480,171,576,192C672,213,768,203,864,165.3C960,128,1056,64,1152,74.7C1248,85,1344,171,1392,213.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+
+      <a href="https://getwaves.io/" target="_blank">Get Waves</a>
+    </div>
+
+    <div class="center">
+      <h1>Blob</h1>
+      <svg
+        viewBox="0 0 1000 1000"
+        xmlns="http://www.w3.org/2000/svg"
+        width="240"
+      >
+        <defs>
+          <clipPath id="a">
+            <path
+              fill="currentColor"
+              d="M805 650.5Q674 801 498 804.5T161 654Q0 500 175 370t358.5-187.5q183.5-57.5 293 130t-21.5 338Z"
+            />
+          </clipPath>
+        </defs>
+        <g clip-path="url(#a)">
+          <path
+            fill="#444cf7"
+            d="M805 650.5Q674 801 498 804.5T161 654Q0 500 175 370t358.5-187.5q183.5-57.5 293 130t-21.5 338Z"
+          />
+        </g>
+      </svg>
+      <a
+        href="https://www.magicpattern.design/tools/blob-generator"
+        target="_blank"
+      >
+        Get Blob</a
+      >
+    </div>
+
+    <div class="center">
+      <h1>Background</h1>
+
+      <a
+        href="https://bggenerator.com/index.php"
+        target="_blank"
+      >
+        Get Background</a
+      >
+    </div>
+  </body>
+</html>
