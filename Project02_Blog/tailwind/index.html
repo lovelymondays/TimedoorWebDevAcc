@@ -1,0 +1,293 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script
+      src="https://kit.fontawesome.com/f90068558c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Blog</title>
+
+    <style>
+      aside {
+        box-shadow: 0px 0px 30px gainsboro;
+      }
+      #project {
+        box-shadow: 0 0 10px gainsboro;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="flex flex-row justify-between bg-[#264E53] h-[60px] items-center text-[#F4A261] text-xl font-bold p-4 place-self-center"
+    >
+      <div class="flex flex-row space-x-2">
+        <img src="assets/header-icon.png" class="w-[40px]" alt="logo" />
+        <h1>Cobee The Coder</h1>
+      </div>
+
+      <nav class="space-x-10">
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        id="jumbotron"
+        class="bg-[#264E53] text-[#E0FBFC] text-center p-2"
+      >
+        <h1
+          class="text-[30px] font-bold pb-[20px]"
+          onmouseover="changeTitle(this)"
+          onmouseout="changeTitleBack(this)"
+        >
+          Get Programming Tips Here!
+        </h1>
+
+        <div
+          class="flex flex-col lg:flex-row justify-around pb-[20px] text-[24px] font-bold"
+        >
+          <div class="text-center lg:text-left space-y-6 my-auto">
+            <h2>Just new in programming world</h2>
+            <h2>
+              Lets start with Creating Simple
+              <span class="text-[#F4A261]">Game and Website</span>
+            </h2>
+            <div class="bg-[#F4A261] h-[10px]"></div>
+
+            <div class="text-[20px] font-normalz">
+              <p>Learn Basic Programming Here</p>
+              <button id="icon-up" onclick="changeText()">
+                <i class="far fa-hand-point-up"></i>
+              </button>
+              <button id="icon-down" onclick="changeText()" class="icon-down">
+                <i class="far fa-hand-point-down"></i>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <img
+              class="h-[400px] hidden lg:flex"
+              src="assets/img-header.png"
+              alt="jumbotron"
+              onmouseover="changeImage(this)"
+              onmouseout="changeImageBack(this)"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="main-content" class="flex flex-col lg:flex-row m-[20px]">
+        <aside
+          class="border-4 border black flex flex-col w-full lg:w-[25%] h-auto lg:h-[800px] text-center flex items-center p-10"
+        >
+          <div class="border-t-8 border-[#264E53] p-5 space-y-5">
+            <h1 class="text-[25px]">Its Cobee</h1>
+            <img
+              class="w-[100px] rounded-[50%] border-black border-2"
+              src="assets/cobee.png"
+              alt="profile"
+            />
+            <div class="flex flex-row items-center justify-center space-x-5">
+              <button class="btn" id="green">
+                <i class="fa fa-thumbs-up fa-lg"></i>
+              </button>
+              <button class="btn" id="red">
+                <i class="fa fa-thumbs-down fa-lg"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-col space-y-5 border-t-8 border-[#264E53]">
+            <h1 class="text-[25px]">Search Here</h1>
+            <input
+              id="myInput"
+              type="text"
+              placeholder="Search ..."
+              class="border-[#264E53] rounded-[5px] border-2 p-2"
+            />
+            <span
+              class="w-full p-[6px] bg-[#264E53] text-[snow] h-[40px] rounded-[5px]"
+              id="addBtn"
+              onclick="newElement()"
+              >Search</span
+            >
+            <ul id="myUL" class="w-full space-y-2">
+              <li class="p-[10px] bg-[#264E53] text-white text-left w-full">
+                HTML
+              </li>
+              <li class="p-[10px] bg-[#264E53] text-white text-left w-full">
+                Code
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <div id="content" class="w-full lg:w-[75%]">
+          <article id="project" class="text-center">
+            <h3 class="text-[24px] text-center p-5">My Project</h3>
+
+            <div class="flex justify-around flex-wrap">
+              <div
+                class="mx-[10] border-b-[10px] border-[#e76f51] rounded-[20px] text-center flex flex-col items-center p-[20px]"
+                id="project"
+              >
+                <img
+                  src="assets/memory-game.png"
+                  alt="project"
+                  class="w-[300px] h-[210px]"
+                />
+                <h4 class="text-[20px] font-bold text-[#e76f51]">
+                  Memory Game
+                </h4>
+                <p>Memory Game is using Phaser as a Jvascript Framework</p>
+              </div>
+
+              <div
+                class="mx-[10] border-b-[10px] border-[#e76f51] rounded-[20px] text-center flex flex-col items-center p-[20px]"
+                id="project"
+              >
+                <img
+                  src="assets/memory-game.png"
+                  alt="project"
+                  class="w-[300px] h-[210px]"
+                />
+                <h4 class="text-[20px] font-bold text-[#e76f51]">
+                  Memory Game
+                </h4>
+                <p>Memory Game is using Phaser as a Jvascript Framework</p>
+              </div>
+
+              <div
+                class="mx-[10] border-b-[10px] border-[#e76f51] rounded-[20px] text-center flex flex-col items-center p-[20px]"
+                id="project"
+              >
+                <img
+                  src="assets/memory-game.png"
+                  alt="project"
+                  class="w-[300px] h-[210px]"
+                />
+                <h4 class="text-[20px] font-bold text-[#e76f51]">
+                  Memory Game
+                </h4>
+                <p>Memory Game is using Phaser as a Jvascript Framework</p>
+              </div>
+
+              <div
+                class="mx-[10] border-b-[10px] border-[#e76f51] rounded-[20px] text-center flex flex-col items-center p-[20px]"
+                id="project"
+              >
+                <img
+                  src="assets/memory-game.png"
+                  alt="project"
+                  class="w-[300px] h-[210px]"
+                />
+                <h4 class="text-[20px] font-bold text-[#e76f51]">
+                  Memory Game
+                </h4>
+                <p>Memory Game is using Phaser as a Jvascript Framework</p>
+              </div>
+
+              <div
+                class="mx-[10] border-b-[10px] border-[#e76f51] rounded-[20px] text-center flex flex-col items-center p-[20px]"
+                id="project"
+              >
+                <img
+                  src="assets/memory-game.png"
+                  alt="project"
+                  class="w-[300px] h-[210px]"
+                />
+                <h4 class="text-[20px] font-bold text-[#e76f51]">
+                  Memory Game
+                </h4>
+                <p>Memory Game is using Phaser as a Jvascript Framework</p>
+              </div>
+            </div>
+          </article>
+
+          <article id="video" class="text-center">
+            <div class="flex flex-col items-center">
+              <h3 class="text-[24px] text-center p-5">What is coding</h3>
+
+              <iframe
+                class="video-content"
+                width="700px"
+                height="400px"
+                src="https://www.youtube.com/embed/XMZFUnAgOqs"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+
+              <h3 class="text-[24px] text-center p-5">
+                Coding is Not Difficult !
+              </h3>
+              <iframe
+                class="video-content"
+                width="700px"
+                height="400px"
+                src="https://www.youtube.com/embed/hb7Q33ysCwI"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+
+          <article id="maps" class="text-center">
+            <div class="flex flex-col items-center">
+              <h3 class="text-[24px] text-center p-5">My Location</h3>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.1041217472043!2d115.23826581416502!3d-8.681647890800283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240f88bb37a69%3A0xdf8443f1fabfe305!2sPT.Timedoor%20Indonesia!5e0!3m2!1sen!2sid!4v1622688384272!5m2!1sen!2sid"
+                width="500"
+                height="350"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="flex flex-col bg-[#264E53] text-white text-center text-[24px]"
+    >
+      <h3>Cobee The Junior Programmer</h3>
+      <div>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div class="bg-white h-[4px]"></div>
+      <p>Copyright &copy; 2021. Cobee. All rights reserved.</p>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="script.js"></script>
+</html>
